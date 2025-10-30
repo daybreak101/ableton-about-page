@@ -1,0 +1,82 @@
+$pallete-yellow: #fbffa7;
+$pallete-paleblue: #b1c5ff;
+$pallete-green: #b6ffc0;
+$pallete-orange: #ff764d;
+$pallete-pink: #d5b3ff;
+$pallete-purple: #0000ff;
+
+:root {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.nav {
+  &__top {
+    display: flex;
+    flex-direction: row;
+    height: 1.75rem;
+    width: 100%;
+    border-bottom: 2px solid rgb(183, 183, 183);
+    padding: 1rem 2rem;
+  }
+
+  &__start {
+    width: 5rem;
+    flex-grow: 0;
+  }
+
+  &__icon {
+    width: 29px;
+
+    &--rotated {
+      rotate: 90deg;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 1rem;
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &--orange, &--orange:visited {
+        color: $pallete-orange;
+    }
+
+    &--purple, &--purple:visited{
+      color: $pallete-purple;
+    }
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+  &__end {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    width: 20rem;
+  }
+
+  &__bottom {
+    height: 2rem;
+  }
+}

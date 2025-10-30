@@ -1,0 +1,95 @@
+:root {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.nav__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 1.75rem;
+  width: 100%;
+  border-bottom: 2px solid #b7b7b7;
+  padding: 1rem 2rem;
+}
+
+.nav__start {
+  width: 5rem;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.nav__icon {
+  width: 29px;
+}
+
+.nav__icon--rotated {
+  rotate: 90deg;
+}
+
+.nav__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav__item {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.nav__item:visited {
+  color: inherit;
+}
+
+.nav__item--orange, .nav__item--orange:visited {
+  color: #ff764d;
+}
+
+.nav__item--purple, .nav__item--purple:visited {
+  color: #0000ff;
+}
+
+.nav__item--small {
+  font-size: 16px;
+}
+
+.nav__end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 20rem;
+}
+
+.nav__bottom {
+  height: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */
