@@ -1,0 +1,67 @@
+@import './variables';
+
+.hero {
+    padding: 0 7.5vw;
+    width: 84%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__image {
+        width: 99%;
+        height: 100%;
+        position: relative;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    &__title {
+        color: $palette-orange;
+        font-size: 120px;   
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.about-us {
+    padding: 7.5rem 25vw;
+
+    &__heading {
+        line-height: 2rem;
+        font-size: 1.4rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &__desc {
+        line-height: 1.5rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &__link, &__link:visited {
+        color: $palette-purple;
+        text-decoration: none;
+    }
+}
+
+.video {
+    padding: 0 25vw;
+
+    &__embed{
+        aspect-ratio: 16/9;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        object-position: center;
+        display: block;
+    }
+
+    &__caption {
+        font-size: 12px;
+        padding: .5rem;
+    }
+}
