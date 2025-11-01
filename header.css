@@ -80,6 +80,12 @@
   font-size: 15px;
 }
 
+.nav__item--small--orange, .nav__item--small--orange:visited {
+  font-size: 15px;
+  color: #ff764d;
+  padding-left: 2rem;
+}
+
 .nav__end {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,7 +96,7 @@
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  width: 20rem;
+  width: 17rem;
 }
 
 .nav__bottom {

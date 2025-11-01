@@ -1,0 +1,157 @@
+@use "variables" as *;
+
+.image-block1 {
+  position: relative;
+  display: flex;
+
+  &__background {
+    margin-left: auto;
+    background-color: $palette-yellow;
+    aspect-ratio: 1/1.0;
+    width: 57.25vw;
+  }
+
+  &__left {
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    transform: translate(0%, -50%);
+    width: 42.5vw;
+    aspect-ratio: 1/1;
+  }
+
+  &__right {
+    position: absolute;
+    top: 50%;
+    right: 7.5%;
+    transform: translate(0%, -50%);
+    width: 34vw;
+    aspect-ratio: 1/0.725;
+  }
+}
+
+.image-block2 {
+  position: relative;
+
+  &__background {
+    background-color: $palette-green;
+    aspect-ratio: 1/1.25;
+    width: 57.25vw;
+    margin-right: auto;
+  }
+
+  &__top-left {
+    position: absolute;
+    top: 27.5%;
+    left: 7.6%;
+    transform: translate(0%, -50%);
+    width: 34vw;
+    aspect-ratio: 1/0.725;
+  }
+
+  &__bottom-left {
+    position: absolute;
+    top: 72.5%;
+    left: 7.6%;
+    transform: translate(0%, -50%);
+    width: 34vw;
+    aspect-ratio: 1/0.725;
+  }
+
+  &__right {
+    position: absolute;
+    top: 50%;
+    right: 7.5%;
+    transform: translate(0%, -50%);
+    width: 42.5vw;
+    aspect-ratio: 1/1;
+  }
+}
+
+.image-block3 {
+  padding: 0 7.5vw;
+
+  &__img {
+    width: 100%;
+    object-fit: fill;
+    aspect-ratio: 1/0.55;
+  }
+}
+
+.image-block4 {
+  position: relative;
+  padding: 0 7.5vw;
+
+  &__background {
+    background-color: $palette-pink;
+    aspect-ratio: 1/0.875;
+    width: 66vw;
+    margin: auto;
+    align-items: center;
+  }
+
+  &__left {
+    position: absolute;
+    top: 50%;
+    left: 7.6%;
+    transform: translate(0%, -50%);
+    width: 34vw;
+    aspect-ratio: 1/0.725;
+  }
+
+  &__right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    width: 40vw;
+    aspect-ratio: 1/1.1;
+  }
+}
+
+.image-block5 {
+  padding: 0 7.5vw;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: row;
+  width: 84%;
+  align-items: stretch;
+
+  &__left {
+    flex: 1;
+    overflow: hidden;
+
+    &__image {
+      overflow: hidden;
+      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    background-color: $palette-paleblue;
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      padding: 10rem 7rem 2rem 7rem;
+    }
+
+    &__link,
+    &__link:visited {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $palette-purple;
+      padding-left: 7rem;
+    }
+
+    &__arrow {
+      width: 20px;
+      fill: $palette-purple;
+    }
+  }
+}

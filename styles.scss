@@ -1,7 +1,8 @@
-@import './variables';
-@import './header';
-@import './body';
-@import './footer';
+@use 'variables' as *;
+@use 'header';
+@use 'body';
+@use 'body-image';
+@use 'footer';
 
 :root {
   font-family: "Urbanist", sans-serif;

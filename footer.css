@@ -1,5 +1,14 @@
 .footer {
   border-top: 2px solid #e6e5e5;
-  height: 100vh;
+  padding: 7rem 7.5vw 5rem 7.5vw;
+  height: 80vh;
+}
+
+.footer__top {
+  padding-bottom: 4rem;
+}
+
+.footer__title {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=footer.css.map */

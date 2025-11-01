@@ -1,4 +1,213 @@
+@use "variables" as *;
+
 .footer {
-    border-top: 2px solid rgb(230, 229, 229);
-    height: 100vh;
+  border-top: 2px solid rgb(230, 229, 229);
+  padding: 7rem 7.5vw 2.5rem 7.5vw;
+  line-height: 1.5rem;
+
+  & section {
+    padding-bottom: 4rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    width: 25vw;
+    justify-content: start;
+
+    &__text {
+      font-weight: normal;
+    }
+
+    &:last-child {
+      max-width: 100vw;
+      flex-grow: 1;
+    }
+
+    &__selects {
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__middle {
+    display: flex;
+  }
+
+  &__link {
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    &__link:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    &--small,
+    &--small:visited {
+      font-weight: bold;
+      font-size: 12px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    &__arrow {
+      width: 16px;
+      align-items: center;
+      height: auto;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    &__start {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+
+    &__list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    &__end {
+      display: flex;
+      flex-grow: 0;
+      align-items: center;
+
+      &__text {
+        font-size: 12px;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  &__icon {
+    width: 29px;
+
+    &--rotated {
+      rotate: 90deg;
+    }
+  }
+  &__socials {
+    padding-top: 1rem;
+    
+    &__list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: 0.75rem;
+    }
+  }
+}
+
+.sign-up {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  &__email {
+    flex-grow: 1;
+    font-size: 19px;
+    font-family: "Urbanist", sans-serif;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 2px;
+    background-color: rgb(235, 235, 235);
+
+    &:focus {
+      border: 2px solid black;
+    }
+  }
+
+  &__button {
+    flex-grow: 0;
+    background-color: $palette-purple;
+    color: white;
+    font-size: 19px;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    padding: 0 1.5rem;
+    border: none;
+    margin-left: -2px;
+  }
+}
+
+.select {
+  font-size: 12px;
+  font-family: "Urbanist", sans-serif;
+  padding: 0 0.5rem;
+  border: 2px solid rgb(235, 235, 235);
+  border-radius: 2px;
+  background-color: rgb(235, 235, 235);
+  width: 6rem;
+  padding-right: 1rem;
+  height: 1.5rem;
+  font-weight: bold;
+
+  &--grow {
+    width: 11rem;
+  }
+}
+
+.social-links,
+.social-links:visited {
+  color: none;
+}
+
+.fa-facebook {
+  font-size: 1.5rem;
+  color: #1877f2;
+}
+
+.fa-x-twitter {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.fa-youtube {
+  font-size: 1.5rem;
+  color: #cd201f;
+}
+
+.fa-instagram {
+  font-size: 1.5rem; /* adjust size */
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-tiktok {
+  font-size: 1.5rem;
+  color: black;
+  text-shadow: -2px 0px 4px #25f4ee, /* cyan glow */ 2px 0px 4px #fe2c55; /* pink/red glow */
+}
+
+.fa-discord {
+  font-size: 1.5rem;
+  color: #7289da;
 }
