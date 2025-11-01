@@ -138,7 +138,6 @@
   }
 
   &__button {
-    flex-grow: 0;
     background-color: $palette-purple;
     color: white;
     font-size: 19px;
@@ -147,6 +146,12 @@
     padding: 0 1.5rem;
     border: none;
     margin-left: -2px;
+    object-fit: fill;
+    height: 2.5rem;
+  }
+
+  &__link {
+    flex-grow: 0;
   }
 }
 

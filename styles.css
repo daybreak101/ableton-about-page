@@ -1,5 +1,4 @@
 .nav {
-  width: 100%;
   z-index: 999;
 }
 .nav__top {
@@ -39,9 +38,12 @@
 .nav__item {
   padding: 2rem 0.75rem;
   text-decoration: none;
+  color: black;
 }
 .nav__item:visited {
-  color: inherit;
+  padding: 2rem 0.75rem;
+  text-decoration: none;
+  color: black;
 }
 .nav__item--orange, .nav__item--orange:visited {
   color: #ff764d;
@@ -69,7 +71,7 @@
   flex-direction: row;
   height: 1.75rem;
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 1rem 2rem;
   align-items: center;
 }
 
@@ -385,7 +387,6 @@
   border: 2px solid black;
 }
 .sign-up__button {
-  flex-grow: 0;
   background-color: #0000ff;
   color: white;
   font-size: 19px;
@@ -394,6 +395,11 @@
   padding: 0 1.5rem;
   border: none;
   margin-left: -2px;
+  object-fit: fill;
+  height: 2.5rem;
+}
+.sign-up__link {
+  flex-grow: 0;
 }
 
 .select {
