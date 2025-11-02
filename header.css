@@ -1,119 +1,149 @@
 .nav {
+  position: relative;
   width: 100%;
-  z-index: 999;
+  background-color: rgba(0, 0, 0, 0);
 }
-
 .nav__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: relative;
+  z-index: 10;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 1.75rem;
-  border-bottom: 2px solid #e6e5e5;
-  padding: 1rem 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 2px solid rgb(230, 229, 229);
+  padding: 1rem 0rem;
 }
-
+.nav__dropdown {
+  position: absolute;
+  z-index: 9;
+  top: -500px;
+  width: 100%;
+  height: 500px;
+  background-color: #0000ff;
+}
 .nav__start {
   padding-left: 1rem;
   width: 4.5rem;
   min-width: 4.5rem;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  flex-grow: 0;
 }
-
 .nav__icon {
   width: 29px;
 }
-
 .nav__icon--rotated {
   rotate: 90deg;
 }
-
 .nav__middle {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: none;
+}
+.nav__menu {
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-
-.nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.nav__menu__button {
+  background-color: white;
+  font-size: 19px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  border: none;
+  -o-object-fit: fill;
+     object-fit: fill;
+  cursor: pointer;
+}
+.nav__end {
+  display: none;
+}
+.nav__bottom {
+  z-index: 0;
+  position: sticky;
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+  flex-direction: row;
+  height: 1.75rem;
+  padding: 1rem 0rem;
+  align-items: center;
+  overflow: auto;
+  overflow-y: hidden;
 }
-
-.nav__list:first-child {
-  padding-left: 0;
-}
-
 .nav__item {
-  padding: 2rem .75rem;
+  padding: 0rem 0.5rem;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+.nav__item:visited {
+  padding: 0rem 0.5rem;
   text-decoration: none;
 }
-
-.nav__item:visited {
-  color: inherit;
-}
-
-.nav__item--orange, .nav__item--orange:visited {
-  color: #ff764d;
-}
-
 .nav__item--purple, .nav__item--purple:visited {
   color: #0000ff;
 }
-
-.nav__item--small {
-  font-size: 15px;
-}
-
-.nav__item--small--orange, .nav__item--small--orange:visited {
-  font-size: 15px;
+.nav__item--orange, .nav__item--orange:visited {
   color: #ff764d;
-  padding-left: 2rem;
+}
+.nav__item--small {
+  font-size: 12px;
+}
+.nav__item--small--orange, .nav__item--small--orange:visited {
+  font-size: 12px;
+  color: #ff764d;
+  padding-left: 1rem;
 }
 
-.nav__end {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  width: 17rem;
+@media (min-width: 1024px) {
+  .nav__start {
+    padding-left: 1rem;
+    width: 4.5rem;
+    min-width: 4.5rem;
+    flex-grow: 0;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .nav__list:first-child {
+    padding-left: 0;
+  }
+  .nav__middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .nav__end {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    width: 14.1rem;
+  }
 }
-
-.nav__bottom {
-  position: -webkit-sticky;
-  position: sticky;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 1.75rem;
-  width: 100%;
-  padding: 1rem 0rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/*# sourceMappingURL=header.css.map */
+@media screen and (min-width: 1280px) {
+  .nav__top {
+    padding: 1rem 1rem;
+  }
+  .nav__list {
+    gap: 0.5rem;
+  }
+  .nav__item {
+    padding: 0rem 0.5rem;
+    font-size: 19px;
+  }
+  .nav__item:visited {
+    padding: 2rem 0.75rem;
+    text-decoration: none;
+  }
+  .nav__item--small {
+    font-size: 15px;
+  }
+  .nav__item--small--orange, .nav__item--small--orange:visited {
+    font-size: 15px;
+    padding-left: 2rem;
+  }
+  .nav__end {
+    width: 17rem;
+  }
+}/*# sourceMappingURL=header.css.map */
