@@ -1,31 +1,117 @@
 @use "variables" as *;
 
 //smallest screens first
-// .nav {
-//   width: 100%;
+.nav {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
 
-//   &__middle {
-//     display: none;
-//   }
+  &__top {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-bottom: 2px solid rgb(230, 229, 229);
+    padding: 1rem 0rem;
+  }
 
-//   &__end {
-//     display: none;
-//   }
-// }
+  &__dropdown {
+    position: absolute;
+    z-index: 9;
+    top: -500px;
+    width: 100%;
+    height: 500px;
+    background-color: $palette-purple;
+  }
 
-// @media (min-width: 1200px) {
-  .nav {
-    z-index: 999;
-    //   background-color: rgba($color: white, $alpha: .70);
+  &__start {
+    padding-left: 1rem;
+    width: 4.5rem;
+    min-width: 4.5rem;
+    flex-grow: 0;
+  }
 
-    &__top {
-      display: flex;
-      flex-direction: row;
-      height: 1.75rem;
-      border-bottom: 2px solid rgb(230, 229, 229);
-      padding: 1rem 1rem;
+  &__icon {
+    width: 29px;
+
+    &--rotated {
+      rotate: 90deg;
+    }
+  }
+
+  &__middle {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+
+    &__button {
+      background-color: white;
+      font-size: 19px;
+      font-family: "Urbanist", sans-serif;
+      font-weight: bold;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+      border: none;
+      object-fit: fill;
+      cursor: pointer;
+    }
+  }
+
+  &__end {
+    display: none;
+  }
+
+  &__bottom {
+    z-index: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    height: 1.75rem;
+    padding: 1rem 0rem;
+    align-items: center;
+    overflow: auto;
+    overflow-y: hidden;
+  }
+
+  &__item {
+    padding: 0rem 0.5rem;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+
+    &:visited {
+      padding: 0rem 0.5rem;
+      text-decoration: none;
     }
 
+    &--purple,
+    &--purple:visited {
+      color: $palette-purple;
+    }
+
+    &--orange,
+    &--orange:visited {
+      color: $palette-orange;
+    }
+
+    &--small {
+      font-size: 12px;
+
+      &--orange,
+      &--orange:visited {
+        font-size: 12px;
+        color: $palette-orange;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
     &__start {
       padding-left: 1rem;
       width: 4.5rem;
@@ -33,18 +119,8 @@
       flex-grow: 0;
     }
 
-    &__icon {
-      width: 29px;
-
-      &--rotated {
-        rotate: 90deg;
-      }
-    }
-
-    &__middle {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
+    &__menu {
+      display: none;
     }
 
     &__list {
@@ -59,53 +135,51 @@
       }
     }
 
-    &__item {
-      padding: 2rem 0.75rem;
-      text-decoration: none;
-      color: black;
-      &:visited {
-        padding: 2rem 0.75rem;
-        text-decoration: none;
-        color: black;
-      }
-
-      &--orange,
-      &--orange:visited {
-        color: $palette-orange;
-      }
-
-      &--purple,
-      &--purple:visited {
-        color: $palette-purple;
-      }
-
-      &--small {
-        font-size: 15px;
-
-        &--orange,
-        &--orange:visited {
-          font-size: 15px;
-          color: $palette-orange;
-          padding-left: 2rem;
-        }
-      }
+    &__middle {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
     }
 
     &__end {
       display: flex;
       align-items: center;
       flex-grow: 0;
-      width: 17rem;
-    }
-
-    &__bottom {
-      position: sticky;
-      display: flex;
-      flex-direction: row;
-      height: 1.75rem;
-      width: 100%;
-      padding: 1rem 2rem;
-      align-items: center;
+      width: 14.1rem;
     }
   }
-// }
+}
+
+@media screen and (min-width: 1280px) {
+  .nav {
+    &__top {
+      padding: 1rem 1rem;
+    }
+
+    &__list {
+      gap: 0.5rem;
+    }
+
+    &__item {
+      padding: 0rem 0.5rem;
+      font-size: 19px;
+      &:visited {
+        padding: 2rem 0.75rem;
+        text-decoration: none;
+      }
+      &--small {
+        font-size: 15px;
+
+        &--orange,
+        &--orange:visited {
+          font-size: 15px;
+          padding-left: 2rem;
+        }
+      }
+    }
+
+    &__end {
+      width: 17rem;
+    }
+  }
+}

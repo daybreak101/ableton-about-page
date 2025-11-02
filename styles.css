@@ -1,12 +1,25 @@
+@charset "UTF-8";
 .nav {
-  z-index: 999;
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
 }
 .nav__top {
+  position: relative;
+  z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  height: 1.75rem;
   border-bottom: 2px solid rgb(230, 229, 229);
-  padding: 1rem 1rem;
+  padding: 1rem 0rem;
+}
+.nav__dropdown {
+  position: absolute;
+  z-index: 9;
+  top: -500px;
+  width: 100%;
+  height: 500px;
+  background-color: #0000ff;
 }
 .nav__start {
   padding-left: 1rem;
@@ -21,61 +34,121 @@
   rotate: 90deg;
 }
 .nav__middle {
+  display: none;
+}
+.nav__menu {
   display: flex;
-  flex-grow: 1;
-  align-items: center;
 }
-.nav__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-.nav__list:first-child {
-  padding-left: 0;
-}
-.nav__item {
-  padding: 2rem 0.75rem;
-  text-decoration: none;
-  color: black;
-}
-.nav__item:visited {
-  padding: 2rem 0.75rem;
-  text-decoration: none;
-  color: black;
-}
-.nav__item--orange, .nav__item--orange:visited {
-  color: #ff764d;
-}
-.nav__item--purple, .nav__item--purple:visited {
-  color: #0000ff;
-}
-.nav__item--small {
-  font-size: 15px;
-}
-.nav__item--small--orange, .nav__item--small--orange:visited {
-  font-size: 15px;
-  color: #ff764d;
-  padding-left: 2rem;
+.nav__menu__button {
+  background-color: white;
+  font-size: 19px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  border: none;
+  object-fit: fill;
+  cursor: pointer;
 }
 .nav__end {
-  display: flex;
-  align-items: center;
-  flex-grow: 0;
-  width: 17rem;
+  display: none;
 }
 .nav__bottom {
+  z-index: 0;
   position: sticky;
   display: flex;
   flex-direction: row;
   height: 1.75rem;
-  width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   align-items: center;
+  overflow: auto;
+  overflow-y: hidden;
+}
+.nav__item {
+  padding: 0rem 0.5rem;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+.nav__item:visited {
+  padding: 0rem 0.5rem;
+  text-decoration: none;
+}
+.nav__item--purple, .nav__item--purple:visited {
+  color: #0000ff;
+}
+.nav__item--orange, .nav__item--orange:visited {
+  color: #ff764d;
+}
+.nav__item--small {
+  font-size: 12px;
+}
+.nav__item--small--orange, .nav__item--small--orange:visited {
+  font-size: 12px;
+  color: #ff764d;
+  padding-left: 1rem;
 }
 
+@media (min-width: 1024px) {
+  .nav__start {
+    padding-left: 1rem;
+    width: 4.5rem;
+    min-width: 4.5rem;
+    flex-grow: 0;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .nav__list:first-child {
+    padding-left: 0;
+  }
+  .nav__middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .nav__end {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    width: 14.1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__top {
+    padding: 1rem 1rem;
+  }
+  .nav__list {
+    gap: 0.5rem;
+  }
+  .nav__item {
+    padding: 0rem 0.5rem;
+    font-size: 19px;
+  }
+  .nav__item:visited {
+    padding: 2rem 0.75rem;
+    text-decoration: none;
+  }
+  .nav__item--small {
+    font-size: 15px;
+  }
+  .nav__item--small--orange, .nav__item--small--orange:visited {
+    font-size: 15px;
+    padding-left: 2rem;
+  }
+  .nav__end {
+    width: 17rem;
+  }
+}
 .hero {
+  z-index: 0;
   padding: 0 7.5vw;
   width: 84%;
   height: 100vh;
@@ -90,7 +163,7 @@
 }
 .hero__title {
   color: #ff764d;
-  font-size: 120px;
+  font-size: 60px;
   position: absolute;
   top: 62%;
   left: 50%;
@@ -99,17 +172,17 @@
 }
 
 .about-us {
-  padding: 7.5rem 25vw;
+  padding: 7.5rem 7.5vw;
 }
 .about-us__heading {
-  line-height: 2rem;
-  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
   padding-bottom: 1.5rem;
 }
 .about-us__desc {
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   padding-bottom: 1.5rem;
 }
 .about-us__link, .about-us__link:visited {
@@ -118,7 +191,7 @@
 }
 
 .video {
-  padding: 0 25vw;
+  padding: 0 7.5vw;
 }
 .video__embed {
   aspect-ratio: 16/9;
@@ -133,6 +206,35 @@
   padding: 0.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 120px;
+  }
+  .about-us {
+    padding: 7.5rem 17vw;
+  }
+  .video {
+    padding: 0 17vw;
+  }
+}
+@media screen and (min-width: 1124px) {
+  .about-us__heading {
+    line-height: 2rem;
+    font-size: 1.4rem;
+  }
+  .about-us__desc {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-us {
+    padding: 7.5rem 25vw;
+  }
+  .video {
+    padding: 0 25vw;
+  }
+}
 .image-block1 {
   position: relative;
   display: flex;
@@ -235,42 +337,76 @@
   padding: 0 7.5vw;
   margin-bottom: 10rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 84%;
   align-items: stretch;
 }
 .image-block5__left {
-  flex: 1;
+  width: 84vw;
+  aspect-ratio: 2/1.25;
   overflow: hidden;
 }
 .image-block5__left__image {
-  overflow: hidden;
-  object-fit: cover;
   width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* ✅ fills while keeping ratio */
   display: block;
 }
 .image-block5__right {
-  flex: 1;
+  width: 84vw;
   background-color: #b1c5ff;
 }
+.image-block5__right-block {
+  margin: 10vw 8vw;
+}
 .image-block5__right__text {
-  font-size: 1.4rem;
+  font-size: 17px;
   line-height: 2rem;
-  padding: 10rem 7rem 2rem 7rem;
+  padding-bottom: 1rem;
 }
 .image-block5__right__link, .image-block5__right__link:visited {
-  font-size: 1.4rem;
+  font-size: 17px;
   text-decoration: none;
   color: #0000ff;
-  padding-left: 7rem;
 }
 .image-block5__right__arrow {
-  width: 20px;
+  width: 15px;
   fill: #0000ff;
 }
 
+@media screen and (min-width: 1124px) {
+  .image-block5__right__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+  }
+  .image-block5__right__link, .image-block5__right__link:visited {
+    font-size: 1.4rem;
+  }
+  .image-block5__right__arrow {
+    width: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .image-block5 {
+    display: flex;
+    flex-direction: row;
+  }
+  .image-block5__left {
+    width: 42vw;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+  .image-block5__left__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ✅ fills while keeping ratio */
+    display: block;
+  }
+  .image-block5__right {
+    width: 42vw;
+  }
+}
 .footer {
   border-top: 2px solid rgb(230, 229, 229);
   padding: 7rem 7.5vw 2.5rem 7.5vw;
