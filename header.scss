@@ -1,11 +1,16 @@
+// Header styling sheet
+
+//Import color scheme
 @use "variables" as *;
 
 //smallest screens first
+// Navbar styling
 .nav {
   position: relative;
   width: 100%;
   background-color: rgba(0,0,0,0);
 
+  // Top navbar section container
   &__top {
     position: relative;
     z-index: 10;
@@ -16,6 +21,7 @@
     padding: 1rem 0rem;
   }
 
+  // TODO: dropdown styling for smaller screens
   &__dropdown {
     position: absolute;
     z-index: 9;
@@ -25,6 +31,7 @@
     background-color: $palette-purple;
   }
 
+  // Navbar home icon container
   &__start {
     padding-left: 1rem;
     width: 4.5rem;
@@ -32,6 +39,7 @@
     flex-grow: 0;
   }
 
+  // Navbar home icon
   &__icon {
     width: 29px;
 
@@ -40,10 +48,13 @@
     }
   }
 
+  // Navbar middle list container
+  // Not visible on smaller screens
   &__middle {
     display: none;
   }
 
+  // TODO: dropdown menu button styling for smaller screen
   &__menu {
     display: flex;
 
@@ -60,10 +71,13 @@
     }
   }
 
+  // Navbar account navigation container
+  // Not visible on smaller screens
   &__end {
     display: none;
   }
 
+  // Navbar bottom container
   &__bottom {
     z-index: 0;
     position: sticky;
@@ -76,6 +90,7 @@
     overflow-y: hidden;
   }
 
+  // Navbar links
   &__item {
     padding: 0rem 0.5rem;
     text-decoration: none;
@@ -110,19 +125,18 @@
   }
 }
 
+// medium screen sizes
 @media (min-width: 1024px) {
+  // Navbar container styling
   .nav {
-    &__start {
-      padding-left: 1rem;
-      width: 4.5rem;
-      min-width: 4.5rem;
-      flex-grow: 0;
-    }
-
+    // TODO: Dropdown menu for smaller screens
+    // Menu button is not visible for larger screens
     &__menu {
       display: none;
     }
 
+    // Navbar link list
+    // Make link list visible in replacement of menu dropdown button
     &__list {
       display: flex;
       list-style: none;
@@ -135,12 +149,16 @@
       }
     }
 
+    //Navbar middle container
+    // Make middle container containing link list visible
     &__middle {
       display: flex;
       flex-grow: 1;
       align-items: center;
     }
 
+    //Navbar container for account navigation
+    // Make account navigation visible
     &__end {
       display: flex;
       align-items: center;
@@ -150,16 +168,24 @@
   }
 }
 
+// Larger screens
 @media screen and (min-width: 1280px) {
+  // Navbar styling
   .nav {
+    // Navbar top container
+    // increase x-padding for larger font-size
     &__top {
       padding: 1rem 1rem;
     }
 
+    // Navbar link list
+    // increase gap for larger font-size
     &__list {
       gap: 0.5rem;
     }
 
+    // Navbar links
+    // increase font-size for links
     &__item {
       padding: 0rem 0.5rem;
       font-size: 19px;
@@ -178,6 +204,8 @@
       }
     }
 
+    // Navbar container for account navigation
+    // adjust width for larger font-size
     &__end {
       width: 17rem;
     }

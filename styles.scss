@@ -1,9 +1,13 @@
+// Styles entry point
+// Imports all other SASS files
+// Grouped by relevant section
 @use 'variables' as *;
 @use 'header';
 @use 'body';
 @use 'body-image';
 @use 'footer';
 
+// Root styles contain main font for entire webpage
 :root {
   font-family: "Urbanist", sans-serif;
   font-weight: bold;

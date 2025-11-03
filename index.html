@@ -24,7 +24,9 @@
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <header class="nav">
+        <!-- Top left on Nav bar, Home link dressed up as logo -->
         <div class="nav__top">
             <nav class="nav__start" aria-label="Home Navigation">
                 <a href="#" aria-label="Home">
@@ -32,9 +34,11 @@
                     <img src="./images/menu-svgrepo-com.svg" alt="" class="nav__icon ">
                 </a>
             </nav>
+            <!-- TODO: Dropdown button for smaller screens -->
             <div class="nav__menu" aria="Navigation Menu">
                 <button class="nav__menu__button">Menu <i class="fa-solid fa-caret-down"></i></button>
             </div>
+            <!-- Top middle on Nav bar, Main Navigation bar -->
             <nav class="nav__middle" aria-label="Main Navigation">
                 <ul class="nav__list">
                     <li><a href="https://www.ableton.com/en/live/" class="nav__item">Live</a></li>
@@ -48,6 +52,7 @@
                     <li><a href="#" class="nav__item nav__item--orange">More +</a></li>
                 </ul>
             </nav>
+            <!-- Top Right on Nav bar, for account Navigation -->
             <nav class="nav__end" aria-label="Account Navigation">
                 <a href="https://www.ableton.com/en/trial/" class="nav__item nav__item--purple">Try Live 12 for free</a>
                 <a href="https://www.ableton.com/en/login/?next=/en/about/" class="nav__item nav__item--small">Login or
@@ -55,20 +60,25 @@
             </nav>
 
         </div>
+        <!-- TODO: Dropdown for smaller screens -->
         <div class="nav__dropdown">
 
         </div>
+        <!-- Bottom nav bar -->
         <div class="nav__bottom" aria-label="Company Navigation">
             <a href="#" class="nav__item nav__item--small--orange">About</a>
             <a href="https://www.ableton.com/en/jobs/" class="nav__item nav__item--small">Jobs</a>
             <a href="https://www.ableton.com/en/ausbildung/" class="nav__item nav__item--small">Apprenticeships</a>
         </div>
     </header>
+    <!-- Main Content -->
     <main>
+        <!-- Main image -->
         <section class="hero">
             <img class="hero__image" src="./images/intro-ableton.jpg">
             <h1 class="hero__title">Ableton</h1>
         </section>
+        <!-- First article -->
         <section class="about-us">
             <h2 class="about-us__heading">We make
                 <a href="https://www.ableton.com/en/live/" class="about-us__link">Live</a>, <a
@@ -83,18 +93,21 @@
                 products are used by a community of dedicated musicians, sound designers, and artists from across the
                 world.</p>
         </section>
+        <!-- Second images -->
         <section class="image-block1">
             <div class="image-block1__background">
                 <img src="./images/drum-machine.jpg" class="image-block1__left">
                 <img src="./images/office-walk.jpg" class="image-block1__right">
             </div>
         </section>
+        <!-- Second article -->
         <section class="about-us">
             <h2 class="about-us__heading">Making music isn’t easy. It takes time, effort, and learning. But when you’re
                 in the flow, it’s incredibly rewarding.</h2>
             <p class="about-us__desc">We feel the same way about making Ableton products. The driving force behind
                 Ableton is our passion for what we make, and the people we make it for.</p>
         </section>
+        <!-- Video section -->
         <section class="video">
             <figure>
                 <iframe class="video__embed" width="768" height="432" src="https://www.youtube.com/embed/9SbnhgjeyXA"
@@ -105,7 +118,7 @@
             </figure>
 
         </section>
-
+        <!-- Third article -->
         <section class="about-us">
             <h2 class="about-us__heading">We are more than 350 people from 30 different countries divided between our
                 headquarters in Berlin and our offices in Los Angeles and Tokyo.</h2>
@@ -115,6 +128,7 @@
                 belief that each of us has the skills and knowledge to contribute to something big: helping to shape the
                 future of music culture.</p>
         </section>
+        <!-- Third image group -->
         <section class="image-block2">
             <div class="image-block2__background">
                 <img class="image-block2__top-left" src="./images/whiteboard.jpg">
@@ -122,6 +136,7 @@
                 <img class="image-block2__right" src="./images/music-work.jpg">
             </div>
         </section>
+        <!-- Fourth article -->
         <section class="about-us">
             <h2 class="about-us__heading">We believe it takes focus to create truly outstanding instruments. We only
                 work on a few products and we strive to make them great.</h2>
@@ -131,9 +146,11 @@
                 perspectives. We don’t always agree with each other, but opinion and debate are valued and openly
                 encouraged.</p>
         </section>
+        <!-- Fourth image group -->
         <section class="image-block3">
             <img class="image-block3__img" src="./images/production-screen.jpg">
         </section>
+        <!-- Fifth article -->
         <section class="about-us">
             <h2 class="about-us__heading">We’re passionate about what we do, but we’re equally passionate about
                 improving who we are.</h2>
@@ -144,12 +161,14 @@
                 staff-organized development and music salons are a chance to discuss new technologies, production
                 techniques and best practices.</p>
         </section>
+        <!-- Fifth image group -->
         <section class="image-block4">
             <div class="image-block4__background">
                 <img src="./images/duo-work.jpg" class="image-block4__left">
                 <img src="./images/presentation.jpg" class="image-block4__right">
             </div>
         </section>
+        <!-- Sixth article -->
         <section class="about-us">
             <h2 class="about-us__heading">We want our employees to love it here. Since we’re looking for exceptional
                 talent from around the world, we will do everything we can to make your transition as easy as possible.
@@ -160,6 +179,7 @@
                 leave. Office hours are flexible, but it’s not all work; we have several company and team outings
                 throughout the year as well as a variety of fun, informal small-group activities.</p>
         </section>
+        <!-- Image and article -->
         <section class="image-block5">
             <div class="image-block5__left">
                 <img src="./images/work-blur.png" class="image-block5__left__image">
@@ -175,11 +195,16 @@
             </div>
         </section>
     </main>
+    <!-- Footer section -->
     <footer class="footer">
+        <!-- Footer Title -->
         <section class="footer__top">
             <h1 class="footer__title">Ableton</h1>
         </section>
+        <!-- Main footer content with links and forms -->
+        <!-- First middle footer row -->
         <section class="footer__middle">
+            <!-- First footer section -->
             <div class="footer__section">
                 <a class="footer__link" href="https://www.ableton.com/en/login/?next=/en/account/add_license/">Register
                     Live, Push or Move<img class="footer__link__arrow" src="./images/chevron-right-svgrepo-com.svg"></a>
@@ -187,6 +212,7 @@
                         src="./images/chevron-right-svgrepo-com.svg"></a>
                 <a class="footer__link" href="https://www.ableton.com/en/jobs/">Jobs<img class="footer__link__arrow"
                         src="./images/chevron-right-svgrepo-com.svg"></a>
+                <!-- Social Media links -->
                 <div class="footer__socials">
                     <ul class="footer__socials__list">
                         <li>
@@ -222,6 +248,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Second footer section -->
             <div class="footer__section">
                 <h3 class="footer__section__title">Education</h3>
                 <a class="footer__link" href="https://www.ableton.com/en/shop/education/">Offers for students and
@@ -231,11 +258,13 @@
                 <a class="footer__link" href="https://www.ableton.com/en/colleges-universities/">Ableton for Colleges
                     and Universities<img class="footer__link__arrow" src="./images/chevron-right-svgrepo-com.svg"></a>
             </div>
+            <!-- Third footer sectoin -->
             <div class="footer__section">
                 <h3 class="footer__section__title">Sign up to our newsletter</h3>
                 <p class="footer__section__text">Enter your email to stay up to date with the latest offers, tutorials,
                     downloads, surveys and more.
                 </p>
+                <!-- Email input form with button -->
                 <div class="sign-up">
                     <input class="sign-up__email" type="email" placeholder="Email Address">
                     <a class="sign-up__link" href="https://www.ableton.com/en/subscribe-to-newsletter/">
@@ -244,7 +273,9 @@
                 </div>
             </div>
         </section>
+        <!-- Second middle row of footer -->
         <section class="footer__middle">
+            <!-- Fourth footer section -->
             <div class="footer__section">
                 <h3 class="footer__section__title">Community</h3>
                 <a class="footer__link" href="">Find Ableton User Groups<img class="footer__link__arrow"
@@ -254,9 +285,12 @@
                 <a class="footer__link" href="">Become a Certified Trainer<img class="footer__link__arrow"
                         src="./images/chevron-right-svgrepo-com.svg"></a>
             </div>
+            <!-- Fifth footer section -->
             <div class="footer__section">
                 <h3 class="footer__section__title">Language and Location</h3>
+                <!-- Select forms -->
                 <div class="footer__section__selects">
+                    <!-- Language select -->
                     <select name="language" class="select">
                         <option value="English">English</option>
                         <option value="German">Deutsch</option>
@@ -265,6 +299,7 @@
                         <option value="Simplified Chinese">简体中文</option>
                         <option value="Spanish">Español</option>
                     </select>
+                    <!-- Location select -->
                     <select name="location" class="select select--grow">
                         <option value="">Please choose</option>
                         <optgroup label="Common Countries" id="common-countries">
@@ -326,7 +361,9 @@
                 </div>
             </div>
         </section>
+        <!-- Footer bottom -->
         <section class="footer__bottom">
+            <!-- Footer bottom links -->
             <div class="footer__bottom__start">
                 <ul class="footer__bottom__list">
                     <ul><a href="https://www.ableton.com/en/contact-us/"
@@ -345,6 +382,7 @@
                             class="footer__link footer__link--small">Imprint</a></ul>
                 </ul>
             </div>
+            <!-- Footer bottom logo -->
             <div class="footer__bottom__end">
                 <span class="footer__bottom__end__text item1">Made In Berlin</span>
                 <img src="./images/menu-svgrepo-com.svg" alt="" class="footer__icon footer__icon--rotated item2">

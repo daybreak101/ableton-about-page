@@ -1,5 +1,10 @@
+// Body styling sheet, for hero image and articles
+
+// Import color scheme
 @use "variables" as *;
 
+// Smaller screens first
+// Introduction image section
 .hero {
   z-index: 0;
   padding: 0 7.5vw;
@@ -7,6 +12,7 @@
   height: 100vh;
   overflow: hidden;
 
+  // Large image
   &__image {
     width: 99%;
     height: 100%;
@@ -15,6 +21,7 @@
     object-position: center;
   }
 
+  // Company name overlaying on top of image
   &__title {
     color: $palette-orange;
     font-size: 60px;
@@ -26,15 +33,18 @@
   }
 }
 
+// Article sections
 .about-us {
   padding: 7.5rem 7.5vw;
 
+  // Heading for article
   &__heading {
     line-height: 1.5rem;
     font-size: 1rem;
     padding-bottom: 1.5rem;
   }
 
+  // Paragraph text for article
   &__desc {
     line-height: 1.25rem;
     font-weight: 500;
@@ -42,6 +52,7 @@
     padding-bottom: 1.5rem;
   }
 
+  // Links contained in articles
   &__link,
   &__link:visited {
     color: $palette-purple;
@@ -49,9 +60,11 @@
   }
 }
 
+// Video container
 .video {
   padding: 0 7.5vw;
 
+  // Fit embedded video into container
   &__embed {
     aspect-ratio: 16/9;
     width: 100%;
@@ -61,33 +74,40 @@
     display: block;
   }
 
+  // Embedded video caption
   &__caption {
     font-size: 12px;
     padding: 0.5rem;
   }
 }
 
+// Medium size screens
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 120px;
   }
 
+  // Increase x-padding for article container
   .about-us {
     padding: 7.5rem 17vw;
   }
 
+  // Increase x-padding for video container
     .video {
     padding: 0 17vw;
   }
 }
 
 @media screen and (min-width: 1124px) {
+  // Article container
   .about-us {
+    // Increase font-size for article heading
     &__heading {
       line-height: 2rem;
       font-size: 1.4rem;
     }
 
+    // INcrease font-size for article paragraphs
     &__desc {
       line-height: 1.5rem;
       font-size: 0.9rem;
@@ -95,11 +115,14 @@
   }
 }
 
+// Larger screens
 @media screen and (min-width: 1280px) {
+  // Increase x-padding for Article container
   .about-us {
     padding: 7.5rem 25vw;
   }
 
+  // Increase x-padding for Video container
   .video {
     padding: 0 25vw;
   }
