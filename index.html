@@ -29,9 +29,12 @@
         <!-- Top left on Nav bar, Home link dressed up as logo -->
         <div class="nav__top">
             <nav class="nav__start" aria-label="Home Navigation">
-                <a href="#" aria-label="Home">
-                    <img src="./images/menu-svgrepo-com.svg" alt="" class="nav__icon nav__icon--rotated">
-                    <img src="./images/menu-svgrepo-com.svg" alt="" class="nav__icon ">
+                <a href="#" aria-label="Home"> <svg class="nav__icon" viewBox="0 0 21 21">
+                        <path d="M4 3v18M9 3v18M14 3v18M19 3v18" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                    <svg class="nav__icon" viewBox="0 0 21 21">
+                        <path d="M3 4h18M3 9h18M3 14h18M3 19h18" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
                 </a>
             </nav>
             <!-- TODO: Dropdown button for smaller screens -->
@@ -62,7 +65,29 @@
         </div>
         <!-- TODO: Dropdown for smaller screens -->
         <div class="nav__dropdown">
-
+            <ul class="dropdown__list">
+                <li><a href="https://www.ableton.com/en/live/" class="dropdown__item">Live</a></li>
+                <li><a href="https://www.ableton.com/en/push/" class="dropdown__item">Push</a></li>
+                <li><a href="https://www.ableton.com/en/move/" class="dropdown__item">Move</a></li>
+                <li><a href="https://www.ableton.com/en/note/" class="dropdown__item">Note</a></li>
+                <li><a href="https://www.ableton.com/en/link/" class="dropdown__item">Link</a></li>
+                <li><a href="https://www.ableton.com/en/shop/" class="dropdown__item">Shop</a></li>
+                <li><a href="https://www.ableton.com/en/packs/" class="dropdown__item">Packs</a></li>
+                <li><a href="https://www.ableton.com/en/help/" class="dropdown__item">Help</a></li>
+                <li><a href="https://www.ableton.com/en/trial/" class="dropdown__item">Try Live 12 for free</a></li>
+                <li><a href="https://www.ableton.com/en/login/?next=/en/about/"
+                        class="dropdown__item dropdown__item--small">Login or
+                        register</a></li>
+                <li>More on Ableton.com:</li>
+                <li><a href="https://www.ableton.com/en/blog/">Blog</a></li>
+                <li><a href="https://www.ableton.com/en/classroom/">Ableton for the Classroom</a></li>
+                <li><a href="https://www.ableton.com/en/colleges-universities/">Ableton for Colleges and
+                        Universities</a></li>
+                <li><a href="https://www.ableton.com/en/certified-training/">Certified Training</a></li>
+                <li><a href="https://www.ableton.com/en/about/">About Ableton</a></li>
+                <li><a href="https://www.ableton.com/en/jobs/">Jobs</a></li>
+                <li><a href="https://www.ableton.com/en/ausbildung/">Apprentinceships</a></li>
+            </ul>
         </div>
         <!-- Bottom nav bar -->
         <div class="nav__bottom" aria-label="Company Navigation">
@@ -71,7 +96,6 @@
             <a href="https://www.ableton.com/en/ausbildung/" class="nav__item nav__item--small">Apprenticeships</a>
         </div>
     </header>
-    <!-- Main Content -->
     <main>
         <!-- Main image -->
         <section class="hero">
@@ -389,6 +413,7 @@
                 <img src="./images/menu-svgrepo-com.svg" alt="" class="footer__icon item3">
             </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>

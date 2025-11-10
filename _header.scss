@@ -8,7 +8,7 @@
 .nav {
   position: relative;
   width: 100%;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 
   // Top navbar section container
   &__top {
@@ -23,12 +23,18 @@
 
   // TODO: dropdown styling for smaller screens
   &__dropdown {
+    display: flex;
     position: absolute;
     z-index: 9;
-    top: -500px;
+    top: 0;
     width: 100%;
     height: 500px;
     background-color: $palette-purple;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    &.open {
+      transform: translateY(0);
+    }
   }
 
   // Navbar home icon container
@@ -37,14 +43,30 @@
     width: 4.5rem;
     min-width: 4.5rem;
     flex-grow: 0;
+    padding-right: 1rem;
+  }
+
+  &__start a:visited {
+    text-decoration: none;
+  }
+
+  &__start a {
+    text-decoration: none;
   }
 
   // Navbar home icon
   &__icon {
-    width: 29px;
+    width: 39px;
+    color: black;
+    padding-left: -1rem;
 
-    &--rotated {
-      rotate: 90deg;
+    // &--rotated {
+    //   rotate: 90deg;
+    // }
+
+    transition: color 0.3s ease;
+    &.open {
+      color: white;
     }
   }
 
@@ -59,7 +81,8 @@
     display: flex;
 
     &__button {
-      background-color: white;
+      background-color: transparent;
+      color: black;
       font-size: 19px;
       font-family: "Urbanist", sans-serif;
       font-weight: bold;
@@ -68,6 +91,10 @@
       border: none;
       object-fit: fill;
       cursor: pointer;
+      transition: color 0.3s ease;
+      &.open {
+        color: white;
+      }
     }
   }
 
@@ -122,6 +149,17 @@
         padding-left: 1rem;
       }
     }
+  }
+}
+
+.dropdown {
+  &__list {
+
+  }
+
+  &__item {
+    color: white;
+    text-decoration: none;
   }
 }
 
