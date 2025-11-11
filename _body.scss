@@ -83,6 +83,7 @@
 
 // Medium size screens
 @media screen and (min-width: 768px) {
+
   .hero__title {
     font-size: 120px;
   }
@@ -97,6 +98,13 @@
     padding: 0 17vw;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .hero{
+      padding-top: 8rem;
+  }
+}
+
 
 @media screen and (min-width: 1124px) {
   // Article container
