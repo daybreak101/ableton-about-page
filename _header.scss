@@ -9,7 +9,6 @@
   position: relative;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
-  
 
   // Top navbar section container
   &__top {
@@ -85,6 +84,15 @@
         color: white;
       }
     }
+  }
+
+  .arrow {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
   }
 
   // Navbar account navigation container
@@ -222,10 +230,14 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0), $palette-purple);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), $palette-purple);
   width: 20px;
   height: 90%;
   z-index: 999;
+}
+
+.hidden {
+  display: none;
 }
 
 // medium screen sizes
@@ -277,7 +289,7 @@
     &__bottom {
       // position: absolute;
       z-index: 10;
-      background-color: rgba(255,255,255, .9);
+      background-color: rgba(255, 255, 255, 0.9);
       width: 100%;
       transition: all 0.3s ease;
     }
@@ -295,9 +307,62 @@
     &__bottom.hide {
       transform: translateY(-100%);
     }
+  }
 
-      
+  .hidden {
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    width: 90%;
+    z-index: 10;
+    background-color: white;
+    height: 260px;
 
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+
+    &__header {
+      font-size: 1.1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__item,
+    &__item:visited {
+      padding-right: 1rem;
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+    }
+
+    &__item--width {
+      flex: 1;
+    }
+
+    &__item--orange,
+    &__item--orange:visited {
+      text-decoration: none;
+      color: $palette-orange;
+    }
+
+    &-item__header {
+      font-weight: bold;
+      padding-right: 1rem;
+      padding-bottom: 0.25rem;
+    }
+
+    &-item__text {
+      font-weight: normal;
+      line-height: 1.5rem;
+      padding-right: 2rem;
+    }
   }
 }
 
@@ -341,6 +406,50 @@
     // adjust width for larger font-size
     &__end {
       width: 17rem;
+    }
+  }
+
+  .hidden {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    height: 260px;
+
+    &__container {
+      padding-bottom: 3rem;
+    }
+
+    &__header {
+      font-size: 1.1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__item,
+    &__item:visited {
+      padding-right: 1rem;
+      text-decoration: none;
+      color: black;
+      font-size: 17px;
+    }
+
+    &__item--width {
+    }
+
+    &__item--orange,
+    &__item--orange:visited {
+      text-decoration: none;
+      color: $palette-orange;
+    }
+
+    &-item__header {
+      font-weight: bold;
+      padding-right: 1rem;
+      padding-bottom: 0.25rem;
+    }
+
+    &-item__text {
+      font-weight: normal;
+      line-height: 1.5rem;
+      padding-right: 2rem;
     }
   }
 }

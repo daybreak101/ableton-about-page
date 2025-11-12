@@ -62,6 +62,13 @@
 .nav__menu__button.open {
   color: white;
 }
+.nav .arrow {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.nav .arrow.open {
+  transform: rotate(180deg);
+}
 .nav__end {
   display: none;
 }
@@ -176,6 +183,10 @@
   z-index: 999;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .nav {
     position: absolute;
@@ -224,6 +235,51 @@
   .nav__bottom.hide {
     transform: translateY(-100%);
   }
+  .hidden {
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    width: 90%;
+    z-index: 10;
+    background-color: white;
+    height: 260px;
+  }
+  .hidden__container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  .hidden__header {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+  .hidden__list {
+    display: flex;
+    flex-direction: row;
+  }
+  .hidden__item, .hidden__item:visited {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+  .hidden__item--width {
+    flex: 1;
+  }
+  .hidden__item--orange, .hidden__item--orange:visited {
+    text-decoration: none;
+    color: #ff764d;
+  }
+  .hidden-item__header {
+    font-weight: bold;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+  }
+  .hidden-item__text {
+    font-weight: normal;
+    line-height: 1.5rem;
+    padding-right: 2rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .nav__top {
@@ -249,6 +305,38 @@
   }
   .nav__end {
     width: 17rem;
+  }
+  .hidden {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    height: 260px;
+  }
+  .hidden__container {
+    padding-bottom: 3rem;
+  }
+  .hidden__header {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+  .hidden__item, .hidden__item:visited {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+  }
+  .hidden__item--orange, .hidden__item--orange:visited {
+    text-decoration: none;
+    color: #ff764d;
+  }
+  .hidden-item__header {
+    font-weight: bold;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+  }
+  .hidden-item__text {
+    font-weight: normal;
+    line-height: 1.5rem;
+    padding-right: 2rem;
   }
 }
 .hero {

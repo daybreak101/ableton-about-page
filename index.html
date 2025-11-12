@@ -39,7 +39,7 @@
             </nav>
             <!-- TODO: Dropdown button for smaller screens -->
             <div class="nav__menu" aria="Navigation Menu">
-                <button class="nav__menu__button">Menu <i class="fa-solid fa-caret-down"></i></button>
+                <button class="nav__menu__button">Menu <i class="fa-solid fa-caret-down arrow"></i></button>
             </div>
             <!-- Top middle on Nav bar, Main Navigation bar -->
             <nav class="nav__middle" aria-label="Main Navigation">
@@ -52,7 +52,7 @@
                     <li><a href="https://www.ableton.com/en/shop/" class="nav__item">Shop</a></li>
                     <li><a href="https://www.ableton.com/en/packs/" class="nav__item">Packs</a></li>
                     <li><a href="https://www.ableton.com/en/help/" class="nav__item">Help</a></li>
-                    <li><a href="#" class="nav__item nav__item--orange">More +</a></li>
+                    <li><a href="#" class="nav__item nav__item--orange more-button">More +</a></li>
                 </ul>
             </nav>
             <!-- Top Right on Nav bar, for account Navigation -->
@@ -149,6 +149,50 @@
                 <div class="fade-effect"></div>
             </div>
         </div>
+        <div class="hidden">
+            <div class="hidden__container">
+                <h1 class="hidden__header">More on Ableton.com</h1>
+                <ul class="hidden__list">
+                    <li><a href="https://www.ableton.com/en/blog/" class="hidden__item">Blog</a></li>
+                    <li><a href="https://www.ableton.com/en/classroom/" class="hidden__item">Ableton for the Classroom</a></li>
+                    <li><a href="https://www.ableton.com/en/colleges-universities/" class="hidden__item">Ableton for Colleges and Universities</a></li>
+                    <li><a href="https://www.ableton.com/en/certified-training/" class="hidden__item">Certified Training</a></li>
+                    <li><a href="https://www.ableton.com/en/about/" class="hidden__item hidden__item--orange">About Ableton</a></li>
+                    <li><a href="https://www.ableton.com/en/jobs/" class="hidden__item">Jobs</a></li>
+                    <li><a href="https://www.ableton.com/en/ausbildung/" class="hidden__item">Apprentinceships</a></li>
+                </ul>
+            </div>
+            <div class="hidden__container">
+                <h1 class="hidden__header">More from Ableton:</h1>
+                <ul class="hidden__list">
+                    <li><a href="https://www.ableton.com/en/blog/categories/loop/" class="hidden__item hidden__item--width">
+                            <h2 class="hidden-item__header">Loop</h2>
+                            <p class="hidden-item__text">
+                                Watch Talks, Performances, and features from Ableton's Summit from Music Makers
+                            </p>
+                        </a></li>
+                    <li><a href="https://learningmusic.ableton.com/" class="hidden__item hidden__item--width">
+                            <h2 class="hidden-item__header">Learning Music</h2>
+                            <p class="hidden-item__text">
+                                Learn the fundamentals of music making right in your browser.
+                            </p>
+                        </a></li>
+                    <li><a href="https://learningsynths.ableton.com/" class="hidden__item hidden__item--width">
+                            <h2 class="hidden-item__header">Learning Synths</h2>
+                            <p class="hidden-item__text">
+                                Get started with synthesis using a web-based synth and accompanying lessons.
+                            </p>
+                        </a></li>
+                    <li><a href="https://makingmusic.ableton.com/" class="hidden__item hidden__item--width">
+                            <h2 class="hidden-item__header">Making Music</h2>
+                            <p class="hidden-item__text">
+                                Some tips from 74 Creative Strategies for Electronic Producers
+                            </p>
+                        </a></li>
+                </ul>
+            </div>
+
+        </div>
         <!-- Bottom nav bar -->
         <div class="nav__bottom" aria-label="Company Navigation">
             <a href="#" class="nav__item nav__item--small--orange">About</a>
@@ -157,6 +201,7 @@
         </div>
     </header>
     <main>
+        <div class="padding"></div>
         <!-- Main image -->
         <section class="hero">
             <img class="hero__image" src="./images/intro-ableton.jpg">
